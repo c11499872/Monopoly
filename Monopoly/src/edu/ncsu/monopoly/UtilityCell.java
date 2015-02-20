@@ -14,9 +14,10 @@ public class UtilityCell extends Cell {
 	}
 
 	public int getRent(int diceRoll) {
-		if(theOwner.numberOfUtil() == 1) {
+		int numberOfUtil = theOwner.numberOfUtil();
+		if(numberOfUtil == 1) {
 			return diceRoll * 4;
-		} else if (theOwner.numberOfUtil() >= 2) {
+		} else if (numberOfUtil >= 2) {
 			return diceRoll * 10;
 		}
 		return 0;
